@@ -18,6 +18,7 @@ This is a simple shell created by **Izekor Ruby** and **Chioma Ononyaba** .
  ### **File Description**
  > 30 files including :
  >>- main.c file : Entry point for execution.
+ >>- hsh file : The compiled shell program(to be run on a linux terminal).
  >>- header.h file : Header file holding function declaration of helper functions.
  >>- others : Files holding several helper functions.
 

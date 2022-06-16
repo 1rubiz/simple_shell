@@ -54,24 +54,22 @@ void set_data(data_shell *datash, char **av)
 *init_shell - Greeting shell during startup
 *Return: void
 */
-void init_shell()
+void init_shell(void)
 {
-    char *username = getenv("USER");
-    clear();
-    printf("\n\n******************"
-        "************************");
-    printf("\n\n\t**** MY ALX SHELL PROJECT ****");
-    printf("\n\t   -USE AT YOUR OWN RISK-");
-    printf("\n\n*******************"
-        "***********************");
-    printf("\n\n\nUSER is: @%s", username);
-    printf("\n");
-    sleep(1);
+	char *username = getenv("USER");
+
+	clear();
+	printf("\n\n******************\t************************");
+	printf("\n\n\t**** MY ALX SHELL PROJECT ****");
+	printf("\n\t   -USE AT YOUR OWN RISK-");
+	printf("\n\n*******************\t***********************");
+	printf("\n\n\nUSER is: @%s", username);
+	printf("\n");
+	sleep(1);
 }
 
 /**
  * main - Entry point
- *
  * @ac: argument count
  * @av: argument vector
  *
@@ -82,9 +80,9 @@ int main(int ac, char **av)
 	data_shell datash;
 	(void) ac;
 
-        init_shell();
+	init_shell();
 	signal(SIGINT, get_sigint);
-        printDir();
+	printDir();
 	set_data(&datash, av);
 	shell_loop(&datash);
 	free_data(&datash);
